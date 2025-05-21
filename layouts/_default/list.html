@@ -8,11 +8,7 @@
           <a class="posts-list-item-title" href="{{ .RelPermalink }}">{{ .Title }}</a>
           <span class="posts-list-item-description">
             {{ partial "icon.html" (dict "ctx" $ "name" "calendar") }}
-            {{ .PublishDate.Format "Jan 2, 2006" }}
-            <span class="posts-list-item-separator">-</span>
-            {{ partial "icon.html" (dict "ctx" $ "name" "clock") }}
-            {{ .ReadingTime }} min read
-          </span>
+            {{ .PublishDate.Format " 2. Jan 2006" }}
         </li>
       {{ end }}
     </ul>
